@@ -1,13 +1,16 @@
 body {
-    	background-color: yellow;
+    	background-color: white;
 }
 
 p {
-	font-family: verdana;
-	border: 1px solid powderblue;
+	font-family: courier;
 	color: blue;
 }
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+}
+td {
+
+    text-align: center
 }
