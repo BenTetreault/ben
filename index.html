@@ -9,13 +9,19 @@
 <body>
 <h1 style="color:red;"> Benjamin Tetreault </h1>
 
-
 <p> <b>School: </b>Eastern Connecticut State University</p>
 <p> <b>Major: </b>Computer Science</p>
 <p> <b>Minor: </b>Business Information Systems</p>
 <p> <b>Graduation: </b>May 2018</p>
 
-<table style="width:75%">
+
+
+
+
+<p></p>
+
+
+<table id ="myTable">
   <tr>
     <th>Course</th>
     <th>Title</th> 
@@ -72,6 +78,67 @@
   </tr>
 </table>
 
+<p id="nameAndTime" </p>
+
+<h4>Please input your course number: </h4>
+
+<input id="courseID">
+
+<button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+
+var x;
+x = document.getElementById("courseID").value
+
+t = document.getElementById("myTable");
+r = t.rows;
+for (i = 0; i < r.length; i++) {
+	if (x == r[i].cells[0].innerHTML) {
+		var x = r[i].cells[1].innerHTML;
+		var y = r[i].cells[4].innerHTML;
+		document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+	}
+}
+
+
+/*
+
+if (x == "CSC 320-01"){
+	var x = document.getElementById("myTable").rows[1].cells[1].innerHTML;
+	var y = document.getElementById("myTable").rows[1].cells[4].innerHTML;
+	document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+}
+else if(x == "CSC 332-01"){
+	var x = document.getElementById("myTable").rows[2].cells[1].innerHTML;
+	var y = document.getElementById("myTable").rows[2].cells[4].innerHTML;
+	document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+}
+else if(x == "CSC 341-01"){
+	var x = document.getElementById("myTable").rows[3].cells[1].innerHTML;
+	var y = document.getElementById("myTable").rows[3].cells[4].innerHTML;
+	document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+}
+else if(x == "CSC 360-02"){
+	var x = document.getElementById("myTable").rows[4].cells[1].innerHTML;
+	var y = document.getElementById("myTable").rows[4].cells[4].innerHTML;
+	document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+}
+else if(x == "CSC 450-02"){
+	var x = document.getElementById("myTable").rows[5].cells[1].innerHTML;
+	var y = document.getElementById("myTable").rows[5].cells[4].innerHTML;
+	document.getElementById("nameAndTime").innerHTML = "Course name: " + x + " Time: " + y;
+}
+
+
+*/
+}
+
+</script>
+
+
+<p id = textOutput ></p>
 </body>
 </html>
 
